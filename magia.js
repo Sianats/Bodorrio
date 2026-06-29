@@ -59,6 +59,9 @@ const CONFIG = {
   },  
 };  
 
+window.addEventListener('load', () => {
+  document.body.classList.remove('loading');});
+
 /* ==========================================================  
    ▲▲▲  FIN DE LA ZONA EDITABLE  ▲▲▲  
    ========================================================== */
