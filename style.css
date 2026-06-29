@@ -609,14 +609,27 @@ transition:all 1.2s ease}
 body:not(.envelope-locked) header,
 body:not(.envelope-locked) section{opacity:1;transform:scale(1)}
 
-@media(max-width:640px){
-  .place.split{
-    flex-direction:column;
+@media(max-width:760px){
+  nav .links{
+    overflow-x:auto;
+    gap:1rem;
   }
 
-  .place .divider{
-    width:60px;
-    height:1px;
+  nav .links a{
+    white-space:nowrap;
+  }
+}
+
+@media(max-width:640px){
+  .count{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1.2rem 1rem;
+    justify-items:center;
+  }
+
+  .count .unit:nth-child(4){
+    grid-column:span 3;
   }
 }
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
