@@ -86,7 +86,6 @@ nav .links a.cta:hover{
   color:white;
   border-color:#E8877F;
 }
-@media(max-width:760px){nav .links a:not(.cta){display:none}}
 
 .eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.32em;text-transform:uppercase}
 
@@ -619,6 +618,16 @@ body:not(.envelope-locked) section{opacity:1;transform:scale(1)}
     white-space:nowrap;
   }
 }
+
+body.loading {
+  opacity: 0;
+}
+
+/*@media(max-width:760px){nav .links a:not(.cta){display:none}}
+body.loading {
+  visibility: hidden;
+  opacity: 0;
+}*/
 
 @media(max-width:640px){
   .count{
