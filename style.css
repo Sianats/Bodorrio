@@ -620,6 +620,7 @@ body:not(.envelope-locked) section{opacity:1;transform:scale(1)}
 }
 
 body.loading {
+  visibility: hidden;
   opacity: 0;
 }
 
