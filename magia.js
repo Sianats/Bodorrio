@@ -162,13 +162,13 @@ function isAttending(){
   return asiste.indexOf('Sí')===0;
 }  
 
-function clampGuests(){  
-  let n=parseInt(acompInput.value,10);  
-  if(Number.isNaN(n)) n=1;  
-  n=Math.max(1,Math.min(10,n));  
-  acompInput.value=n;  
-  return n;  
-}  
+function clampGuests(){
+  let n = parseInt(acompInput.value,10);
+  if (Number.isNaN(n)) n = 1;
+  n = Math.max(1, Math.min(10,n));
+  acompInput.value = n;
+  return n;
+}
 
 function getAdultMenuOptions(){  
   return `
