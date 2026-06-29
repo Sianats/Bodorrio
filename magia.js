@@ -54,7 +54,7 @@ const CONFIG = {
   // Alternativas: modo:"whatsapp" o "email" (usan "destino" en vez de sheetURL).  
   rsvp:{  
     modo:"sheets",  
-    sheetURL:"https://script.google.com/macros/s/AKfycbyACLNfHS9jMFdiLmya3PTCW6Io_w70vS9nj2S3thSrV4odCSW6P-jEmAls2x0uFwm8/exec",  
+    sheetURL:"https://script.google.com/macros/s/AKfycbyAbJzySf3zyxI7tgr2ooXxcpwXpZPpwCv2Kav7enNx1Gwu1RII1Y5byVCOxrB6Xe1ZIg/exec",  
     destino:"34600000000",  
   },  
 };  
