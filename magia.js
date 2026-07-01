@@ -7,10 +7,10 @@ const CONFIG = {
   rsvpLimite:"Confírmanos antes del 11 de Noviembre de 2026.",  
   cierreFrase:"Bajo el mismo sol, entre dos mares",  
   isla:{  
-    novia:{nombre:"Ibiza", coords:"38°54′N · 1°26′E", coordsLargo:"38°54′N · 1°26′E · Mediterráneo",  
+    novia:{nombre:"Ibiza", coords:"39°04′N · 1°44′E", coordsLargo:"39°04′N · 1°44′E · Mediterráneo",  
            desc:"Pinos, sal y atardeceres de las Pitiusas."},  
-    novio:{nombre:"Lanzarote", coords:"29°03′N · 13°38′O", coordsLargo:"29°03′N · 13°38′O · Atlántico",  
-           desc:"Lava, viento y cielos de fuego en el Atlántico."},  
+    novio:{nombre:"Lanzarote", coords:"29°07′N · -13°47′O", coordsLargo:"29°07′N · -13°47′O · Atlántico",  
+           desc:"Lava, viento y cielos de fuego en el Atlántico."},
   },  
   distancia:"1.700 km",  
   historia:[  
@@ -38,15 +38,15 @@ const CONFIG = {
   vestimenta:{titulo:"Semi-formal",   
     texto:"Colores primaverales, rebequita y zapato cómodo: habrá césped, baile y mucho alcohol. Aunque el blanco no está en la lista, aquí hay recomendaciones que no os harán desentonar:",  
     paleta:["#DD874E","#EAAF7A","#D65A57","#E7C878","#B9B45E","#9E92A6","#9AA8BC"]},  
-  regalo:{texto:"Vuestra presencia es lo único imprescindible. Si además queréis regalarnos algo pero no sabeis qué...",  
+  regalo:{texto:"Lo importante es que estéis con nosotros ese día. Si además queréis tener un detalle, hemos dejado esta opción por si os resulta más cómoda que el formato 'sobre' tradicional.",  
     opciones:[  
       {label:"IBAN", valor:"ES03 0049 4973 5323 1701 5930"},  
       {label:"Bizum", valor:"649 888 277"},  
     ]},  
   faq:[  
-    {q:"¿Puedo llevar acompañante?", a:"Puedes indicarlo al confirmar tu asistencia y lo tendremos en cuenta para el catering. Eso sí, ante la duda, siempre es un acierto preguntar antes, ya que no podemos incluir a personas con las que no tengamos relación directa."},  
-    {q:"¿Los niños son bienvenidos?", a:"¡Claro! Avísanos para preparar su sitio y su menú."},  
-    {q:"¿Hay aparcamiento?", a:"Sí, en el propio lugar."},  
+    {q:"¿Y el acompañante?", a:"Los acompañantes se indican al confirmar tu asistencia y lo tendremos en cuenta para el catering. Si en la invitación os hemos indicado un número, significa que podéis venir con ese número de acompañantes. Pueden ser pareja, hijos, familiares, etc.; en cualquier caso, se trata de personas que ya hemos previsto y por eso hemos enviado la invitación de forma conjunta. Si tenéis dudas sobre quién podría ser ese acompañante, no dudéis en preguntarnos."},  
+    {q:"¿Los niños son bienvenidos?", a:"¡Claro! Avísanos para preparar su sitio y su menú. Indicanos en los comentarios de la confirmación qué edad tienen y si necesitan trona."},  
+    {q:"¿Hay aparcamiento?", a:"Sí, en el propio lugar hay 2 parkings. Al ser limitado, recomendamos compartir coche o venir en taxi."},  
     {q:"¿Hasta cuándo confirmo?", a:"Cuanto antes mejor, y como muy tarde en la fecha indicada en la sección de confirmación."},  
   ],  
   // RSVP -> Google Sheets (mediante Apps Script).  
