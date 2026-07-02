@@ -724,6 +724,12 @@ body.loading {
     letter-spacing:.10em;
   }
 
+  nav .links a + a::before{
+    content:"·";
+    margin-right:.55rem;
+    color:#C8A4A0;
+  }
+
   nav .links a.cta{
     padding:.35rem .55rem;
   }
