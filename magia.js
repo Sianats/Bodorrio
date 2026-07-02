@@ -32,7 +32,7 @@ const CONFIG = {
   viaje:[  
     {ico:"Cómo llegar", titulo:"Vuelos a Ibiza (IBZ)", texto:"Conexiones directas desde Madrid, Barcelona, Valencia y Palma. Desde Canarias, escala en la península."},  
     {ico:"En la isla", titulo:"Coche de alquiler", texto:"Lo más cómodo para moverse. Los novios recomiendan MotoLuis."},  
-    {ico:"Dónde dormir", titulo:"Zona Santa Eulària", texto:"Hoteles y agroturismos cerca del lugar. Contactad con los novios para recomendaciones y descuentos."},  
+    {ico:"Dónde dormir", titulo:"Zona Santa Eulària", texto:"Contactad con los novios para recomendaciones ya que tienen acuerdos con algunos hoteles. Además, Can Curreu ofrece un 15% de descuento para nuestros invitados en el alojamiento el día de la boda."},  
     {ico:"Detalle", titulo:"Desplazamiento", texto:"Con alcohol de por medio, siempre es mejor ir en taxi o designar al sobrio del grupo... </br> ¡Suerte a esa persona!"},  
   ],  
   vestimenta:{titulo:"Semi-formal",   
@@ -54,7 +54,7 @@ const CONFIG = {
   // Alternativas: modo:"whatsapp" o "email" (usan "destino" en vez de sheetURL).  
   rsvp:{  
     modo:"sheets",  
-    sheetURL:"https://script.google.com/macros/s/AKfycbyAbJzySf3zyxI7tgr2ooXxcpwXpZPpwCv2Kav7enNx1Gwu1RII1Y5byVCOxrB6Xe1ZIg/exec",  
+    sheetURL:"https://script.google.com/macros/s/AKfycbyaaHlF2jjbR5rAzKUKkLzVLtyD0zozEx8D7cUbVcTwp6ClwCynPZnIbSYmfNDlGWELaQ/exec",  
     destino:"34600000000",  
   },  
 };  
