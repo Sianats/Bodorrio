@@ -839,7 +839,7 @@ body.loading {
     padding:.45rem .7rem;
   }
 
-  /* Ocultamos los menos importantes */
+  /* Ocultamos lo menos importante */
 
   nav .links a[href="#historia"],
   nav .links a[href="#viaje"]{
