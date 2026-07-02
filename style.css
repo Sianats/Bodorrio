@@ -598,7 +598,7 @@ footer .sun-mini{width:13px;height:13px;border-radius:50%;background:var(--sol);
 .envelope-gate.is-opening .envelope-letter{transform:translateY(-40%)}
 .envelope-gate.is-opening .wax-seal {opacity: 0;transform: scale(0);}
 
-.envelope-gate.is-unfolding{}
+/*.envelope-gate.is-unfolding{}*/
 
 .envelope-gate.is-hiding{
   opacity:0;transform:scale(1.05);filter:blur(8px);
