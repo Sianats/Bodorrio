@@ -332,6 +332,9 @@ opacity:.7;filter:blur(1.5px)}
 .field textarea{resize:vertical;min-height:80px}
 .field.is-hidden{display:none}
 .guest-list{display:grid;gap:.9rem}
+.guest-list:empty{
+  display:none;
+}
 .guest-card{
   padding:1.2rem;
   border-radius:10px;
@@ -624,22 +627,17 @@ body.loading {
   opacity: 0;
 }
 
-/*@media(max-width:760px){nav .links a:not(.cta){display:none}}
-body.loading {
-  visibility: hidden;
-  opacity: 0;
-}*/
-
 @media(max-width:640px){
   .count{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:1.2rem 1rem;
-    justify-items:center;
+    grid-template-columns:repeat(2,auto);
+    justify-content:center;
+    gap:1.2rem 2rem;
   }
 
   .count .unit:nth-child(4){
-    grid-column:span 3;
+    grid-column:1 / span 2;
+    justify-self:center;
   }
 }
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
