@@ -250,6 +250,7 @@ opacity:.7;filter:blur(1.5px)}
 nav .brand img{
   height:40px;
   width:auto;
+  flex-shrink:0;
   display:block;
 }
 
@@ -653,6 +654,11 @@ body.loading {
     gap:1.5rem 1rem;
   }
 
+  nav .links a[href="#historia"],
+  nav .links a[href="#viaje"]{
+    display:none;
+  }
+
   .count .unit{
     min-width:auto;
     text-align:center;
@@ -758,6 +764,7 @@ body.loading {
       translateY(0px)
       rotate(-1.5deg);
   }
+  
 }
 
 /* PowerPoint Windows XP vibes */
