@@ -709,7 +709,7 @@ body.loading {
 
     align-items:center;
 
-    gap:.6rem;
+    gap:.9rem;
   }
 
   nav .links::-webkit-scrollbar{
@@ -722,12 +722,6 @@ body.loading {
 
     font-size:.58rem;
     letter-spacing:.10em;
-  }
-
-  nav .links a + a::before{
-    content:"·";
-    margin-right:.55rem;
-    color:#C8A4A0;
   }
 
   nav .links a.cta{
