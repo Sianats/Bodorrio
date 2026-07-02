@@ -90,7 +90,7 @@ set('t-gift-text',CONFIG.regalo.texto);
 set('t-rsvp-fecha',CONFIG.rsvpLimite);  
 set('t-end-sub',CONFIG.cierreFrase);  
 set('t-foot-novia',CONFIG.isla.novia.nombre); set('t-foot-novio',CONFIG.isla.novio.nombre);  
-document.title=`${CONFIG.novio} y ${CONFIG.novia} · Nos casamos`;  
+document.title=`J & A`;  
 
 /* ---- Render listas ---- */  
 $('story').innerHTML=CONFIG.historia.map(b=>  
@@ -172,6 +172,8 @@ function clampGuests(){
   acompInput.value = n;
   return n;
 }
+
+acompInput.addEventListener('change', clampGuests);
 
 function getAdultMenuOptions(){  
   return `
