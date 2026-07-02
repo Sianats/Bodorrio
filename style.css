@@ -247,6 +247,12 @@ opacity:.7;filter:blur(1.5px)}
   background-position:center 65%;
 }
 
+nav .brand img{
+  height:40px;
+  width:auto;
+  display:block;
+}
+
 .place .convite::before{
   background-image:url('casa.png');
 }
