@@ -642,6 +642,126 @@ body.loading {
   opacity: 0;
 }
 
+@media(max-width:640px){
+
+  /* HERO */
+
+  .islands,
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .hero-top{
+    flex-direction:column;
+    align-items:center;
+    gap:.3rem;
+  }
+
+  .coast-tag,
+  .coast-tag.r{
+    text-align:center;
+  }
+
+  /* CONTADOR */
+
+  .count{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:1.5rem 1rem;
+  }
+
+  .count .unit{
+    min-width:auto;
+    text-align:center;
+  }
+
+  .count .num{
+    font-size:3.2rem;
+  }
+
+  /* MENÚ */
+
+  nav{
+    padding:.7rem .8rem;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:.75rem;
+  }
+
+  nav .brand{
+    flex-shrink:0;
+  }
+
+  nav .brand img{
+    height:34px;
+    width:auto;
+    display:block;
+    flex-shrink:0;
+  }
+
+  nav .links{
+    flex:1;
+    min-width:0;
+
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+
+    gap:.65rem;
+
+    overflow-x:auto;
+    overflow-y:hidden;
+
+    white-space:nowrap;
+
+    scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;
+  }
+
+  nav .links::-webkit-scrollbar{
+    display:none;
+  }
+
+  nav .links a{
+    flex:0 0 auto;
+    white-space:nowrap;
+
+    font-size:.58rem;
+    letter-spacing:.10em;
+  }
+
+  nav .links a.cta{
+    padding:.45rem .7rem;
+  }
+
+  /* Ocultamos los menos importantes */
+
+  nav .links a[href="#historia"],
+  nav .links a[href="#viaje"]{
+    display:none;
+  }
+
+  /* CEREMONIA / CONVITE */
+
+  .place.split{
+    flex-direction:column;
+    gap:2.5rem;
+  }
+
+  .place .col{
+    width:100%;
+    max-width:none;
+  }
+
+  .place .divider{
+    width:60%;
+    height:1px;
+    background:rgba(200,150,140,.4);
+  }
+
+}
+
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 
 /* =============================
@@ -752,116 +872,4 @@ body.loading {
       scale(1)
       rotate(0deg);
   }
-}
-
-@media(max-width:640px){
-
-  /* HERO */
-  .islands,
-  .cards{
-    grid-template-columns:1fr;
-  }
-
-  .hero-top{
-    flex-direction:column;
-    align-items:center;
-    gap:.3rem;
-  }
-
-  .coast-tag,
-  .coast-tag.r{
-    text-align:center;
-  }
-
-  /* CONTADOR */
-
-  .count{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:1.5rem 1rem;
-  }
-
-  .count .unit{
-    min-width:auto;
-    text-align:center;
-  }
-
-  .count .num{
-    font-size:3.2rem;
-  }
-
-  /* MENÚ */
-
-  nav{
-    padding:.7rem .8rem;
-    gap:.6rem;
-    justify-content:flex-start;
-  }
-
-  nav .brand{
-    flex-shrink:0;
-  }
-
-  nav .brand img{
-    height:34px;
-    width:auto;
-    display:block;
-    flex-shrink:0;
-  }
-
-  nav .links{
-    flex:1;
-    min-width:0;
-    display:flex;
-    align-items:center;
-    gap:.7rem;
-
-    overflow-x:auto;
-    overflow-y:hidden;
-    white-space:nowrap;
-
-    -webkit-overflow-scrolling:touch;
-    scrollbar-width:none;
-  }
-
-  nav .links::-webkit-scrollbar{
-    display:none;
-  }
-
-  nav .links a{
-    flex:0 0 auto;
-    font-size:.58rem;
-    letter-spacing:.10em;
-    white-space:nowrap;
-  }
-
-  nav .links a.cta{
-    padding:.45rem .7rem;
-  }
-
-  /* Ocultamos lo menos importante */
-
-  nav .links a[href="#historia"],
-  nav .links a[href="#viaje"]{
-    display:none;
-  }
-
-  /* CEREMONIA / CONVITE */
-
-  .place.split{
-    flex-direction:column;
-    gap:2.5rem;
-  }
-
-  .place .col{
-    width:100%;
-    max-width:none;
-  }
-
-  .place .divider{
-    width:60%;
-    height:1px;
-    background:rgba(200,150,140,.4);
-  }
-
 }
