@@ -165,15 +165,7 @@ function isAttending(){
   return asiste.indexOf('Sí')===0;
 }  
 
-function clampGuests(){
-  let n = parseInt(acompInput.value,10);
-  if (Number.isNaN(n)) n = 1;
-  n = Math.max(1, Math.min(10,n));
-  acompInput.value = n;
-  return n;
-}
 
-acompInput.addEventListener('change', clampGuests);
 
 function getAdultMenuOptions(){  
   return `
@@ -233,6 +225,16 @@ function updateGuestMenu(i){
   }
 }
 
+function clampGuests(){
+  let n = parseInt(acompInput.value,10);
+
+  if (Number.isNaN(n) || n < 1) n = 1;
+  if (n > 10) n = 10;
+
+  acompInput.value = n;
+  return n;
+}
+
 function bindGuestMenuEvents(){
   document.querySelectorAll('[data-guest-tipo]').forEach(select=>{
     select.addEventListener('change',()=>{
@@ -289,8 +291,14 @@ seg.addEventListener('click',e=>{
   updateAttendanceUI();  
 });  
 
-acompInput.addEventListener('input',renderGuests);  
-acompInput.addEventListener('blur',renderGuests);  
+acompInput.addEventListener('input', function () {
+  this.value = this.value.replace(/\D/g, '');
+});
+
+acompInput.addEventListener('blur', function () {
+  clampGuests();
+  renderGuests();
+});
 
 updateAttendanceUI();  
 
