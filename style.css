@@ -626,7 +626,20 @@ transition:all 1.2s ease}
 body:not(.envelope-locked) header,
 body:not(.envelope-locked) section{opacity:1;transform:scale(1)}
 
+.nav-sep{
+  display:none;
+}
+
 @media(max-width:760px){
+
+  .nav-sep{
+  display:inline-block;
+  color:#A06A64;
+  opacity:.35;
+  margin:0 .15rem;
+  user-select:none;
+  }
+  
   nav .links{
     overflow-x:auto;
     gap:1rem;
