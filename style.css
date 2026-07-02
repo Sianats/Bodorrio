@@ -662,6 +662,17 @@ body.loading {
     font-size:3.6rem;
   }
 
+  .place.split{
+    flex-direction:column;
+    gap:2.5rem;
+  }
+
+  .place .divider{
+    width:60%;
+    height:1px;
+    background:rgba(200,150,140,.4);
+  }
+
 }
 
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
