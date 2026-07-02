@@ -681,12 +681,12 @@ body.loading {
 
   /* MENÚ */
 
+
   nav{
     padding:.7rem .8rem;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:.75rem;
   }
 
   nav .brand{
@@ -706,17 +706,10 @@ body.loading {
 
     display:flex;
     justify-content:flex-end;
+
     align-items:center;
 
-    gap:.65rem;
-
-    overflow-x:auto;
-    overflow-y:hidden;
-
-    white-space:nowrap;
-
-    scrollbar-width:none;
-    -webkit-overflow-scrolling:touch;
+    gap:.6rem;
   }
 
   nav .links::-webkit-scrollbar{
@@ -732,7 +725,7 @@ body.loading {
   }
 
   nav .links a.cta{
-    padding:.45rem .7rem;
+    padding:.35rem .55rem;
   }
 
   /* Ocultamos los menos importantes */
