@@ -253,6 +253,19 @@ nav .brand img{
   display:block;
 }
 
+.boat-msg{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:.5rem;
+}
+
+.icono-altavoz{
+  width:18px;
+  height:18px;
+  object-fit:contain;
+}
+
 .place .convite::before{
   background-image:url('casa.png');
 }
