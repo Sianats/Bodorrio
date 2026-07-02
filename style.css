@@ -429,8 +429,26 @@ nav .brand img{
 text-align:center;padding:clamp(3rem,9vw,6rem) 1.4rem}
 .end .t{font-family:var(--display);font-size:clamp(2.2rem,7vw,3.8rem);font-variation-settings:"opsz" 90,"SOFT" 50}
 .end .s{margin-top:.8rem;font-family:var(--mono);font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;opacity:.85}
-footer{text-align:center;padding:2.6rem 1.4rem;font-family:var(--mono);font-size:.64rem;letter-spacing:.18em;color:rgba(244,239,228,.6)}
-footer .sun-mini{width:13px;height:13px;border-radius:50%;background:var(--sol);display:inline-block;vertical-align:middle;margin:0 .55em;box-shadow:0 0 10px var(--sol)}
+footer{
+  text-align:center;
+  padding:2.6rem 1.4rem;
+  font-family:var(--mono);
+  font-size:.64rem;
+  letter-spacing:.18em;
+  color:#FFF8F3;
+  text-shadow:0 1px 6px rgba(160,106,100,.25);
+}
+
+footer .sun-mini{
+  width:13px;
+  height:13px;
+  border-radius:50%;
+  background:#FFD79A;
+  display:inline-block;
+  vertical-align:middle;
+  margin:0 .55em;
+  box-shadow:0 0 10px #FFD79A;
+}
 
 /* Reveal */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
@@ -639,7 +657,7 @@ body:not(.envelope-locked) section{opacity:1;transform:scale(1)}
   margin:0 .15rem;
   user-select:none;
   }
-  
+
   nav .links{
     overflow-x:auto;
     gap:1rem;

@@ -496,9 +496,23 @@ for(let i=0;i<90;i++){
 const sky=$('sky'), celest=$('celest'), moon=$('moon');  
 
 // keyframes: [t=0 atardecer] -> [t=.5 dorado] -> [t=1 noche]  
-const TOP=['#FFE5D9','#FBC4AB','#FADCD9'];  
-const MID=['#FBC4AB','#F7A8A4','#E8877F'];  
-const HOR=['#FFE5D9','#FBC4AB','#EAA190'];  
+const TOP=[
+  '#FFF9D7', // amarillo suave
+  '#FFD79A', // golden hour
+  '#F7C3AE'  // rosa melocotón
+];
+
+const MID=[
+  '#FFE2A8',
+  '#F7B977',
+  '#EFA39B'
+];
+
+const HOR=[
+  '#FFD99B',
+  '#EEA46A',
+  '#D98E88'
+];
 
 const hex=h=>{
   h=h.replace('#','');
@@ -535,8 +549,8 @@ function paintSky(){
   sky.style.background=`linear-gradient(to bottom,${pick(TOP,p)} 0%,${pick(MID,p)} 55%,${pick(HOR,p)} 100%)`;  
 
   // sol baja y se apaga  
-  celest.style.top=(56+p*40)+'vh';  
-  celest.style.opacity = 1 - (p * 0.85);  
+  celest.style.top=(48+p*28)+'vh';
+  celest.style.opacity = 1 - (p * 0.45); 
   //celest.style.opacity=Math.max(0,1-p*1.6);  
   celest.style.filter=`blur(${p*2}px)`;  
 
