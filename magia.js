@@ -208,6 +208,14 @@ function guestRow(i){
           <option value="">Elige primero el tipo de menú</option>
         </select>
       </div>  
+
+      <div class="field">
+        <label for="f-guest-${i}-alergias">Alergias o intolerancias del acompañante</label>
+        <input
+          id="f-guest-${i}-alergias"
+          type="text"
+          placeholder="Opcional">
+      </div>
     </div>`;  
 }  
 
@@ -326,7 +334,8 @@ sendBtn.addEventListener('click',async ()=>{
     for(let i=2;i<=total;i++){  
       const n=$(`f-guest-${i}-nombre`);  
       const t=$(`f-guest-${i}-tipo`);  
-      const m=$(`f-guest-${i}-menu`);  
+      const m=$(`f-guest-${i}-menu`);
+      const a=$(`f-guest-${i}-alergias`);  
 
       const nombreInvitado=n?.value.trim()||'';  
       const tipoInvitado=t?.value||'';  
@@ -354,8 +363,9 @@ sendBtn.addEventListener('click',async ()=>{
         numero:i,
         nombre:nombreInvitado,
         tipoMenu:tipoInvitado,
-        menu:menuInvitado
-      });  
+        menu:menuInvitado,
+        alergias:a?.value.trim() || ''
+      });
     }  
   }  
 
