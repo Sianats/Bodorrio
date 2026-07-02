@@ -133,8 +133,24 @@
   </header>
 
   <!-- ===================== CUENTA ATRÁS ===================== -->
-  <section class="section">
-    <div class="panel dark reveal">
+<section class="section" id="contador-section">
+
+  <div class="panel dark reveal countdown-panel">
+
+    <div class="boat-screen" id="boat-screen">
+
+      <div class="escena">
+        <img src="barco/barco.png" alt="Barco" class="barco">
+      </div>
+
+      <div class="boat-msg">
+        ¡Púlsame!
+      </div>
+
+    </div>
+
+    <div class="countdown-content" id="countdown-content">
+
       <span class="eyebrow c">Cuenta atrás</span>
       <h2 class="title">¿Cuándo zarpa el amor?</h2>
 
@@ -143,14 +159,17 @@
           <div class="num" id="d">--</div>
           <div class="lab">Días</div>
         </div>
+
         <div class="unit">
           <div class="num" id="h">--</div>
           <div class="lab">Horas</div>
         </div>
+
         <div class="unit">
           <div class="num" id="m">--</div>
           <div class="lab">Min</div>
         </div>
+
         <div class="unit">
           <div class="num" id="s">--</div>
           <div class="lab">Seg</div>
@@ -158,8 +177,16 @@
       </div>
 
       <p class="count-msg" id="count-msg"></p>
+
     </div>
-  </section>
+
+    <audio id="countdown-audio" preload="auto">
+      <source src="camela.mp3" type="audio/mpeg">
+    </audio>
+
+  </div>
+
+</section>
 
   <!-- ===================== HISTORIA ===================== -->
   <section class="section" id="historia">

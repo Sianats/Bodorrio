@@ -646,3 +646,112 @@ body.loading {
 }
 
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+
+/* =============================
+   BARCO + CUENTA ATRÁS
+============================= */
+
+.countdown-panel{
+  position:relative;
+  overflow:hidden;
+}
+
+.boat-screen{
+  cursor:pointer;
+  text-align:center;
+}
+
+.boat-msg{
+  margin-top:1rem;
+  font-family:var(--mono);
+  font-size:.7rem;
+  letter-spacing:.25em;
+  text-transform:uppercase;
+  color:#A06A64;
+}
+
+.countdown-content{
+  display:none;
+}
+
+.countdown-panel.started .boat-screen{
+  display:none;
+}
+
+.countdown-panel.started .countdown-content{
+  display:block;
+  animation:molinoZoom 1.2s ease both;
+}
+
+/* TU ANIMACIÓN DEL BARCO */
+
+.escena{
+  width:min(90vw,700px);
+  margin:auto;
+}
+
+.barco{
+  width:100%;
+  display:block;
+  transform-origin:center bottom;
+  animation:navegar 6s ease-in-out infinite;
+  filter:drop-shadow(0 10px 15px rgba(0,0,0,.10));
+}
+
+@keyframes navegar{
+  0%{
+    transform:
+      translateY(0px)
+      rotate(-1.5deg);
+  }
+
+  25%{
+    transform:
+      translateY(-6px)
+      rotate(1deg);
+  }
+
+  50%{
+    transform:
+      translateY(0px)
+      rotate(-1.5deg);
+  }
+
+  75%{
+    transform:
+      translateY(4px)
+      rotate(1deg);
+  }
+
+  100%{
+    transform:
+      translateY(0px)
+      rotate(-1.5deg);
+  }
+}
+
+/* PowerPoint Windows XP vibes */
+
+@keyframes molinoZoom{
+
+  0%{
+    opacity:0;
+    transform:
+      scale(0.05)
+      rotate(-720deg);
+  }
+
+  60%{
+    opacity:1;
+    transform:
+      scale(1.15)
+      rotate(20deg);
+  }
+
+  100%{
+    opacity:1;
+    transform:
+      scale(1)
+      rotate(0deg);
+  }
+}

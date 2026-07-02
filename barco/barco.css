@@ -1,0 +1,77 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#ffffff;
+    overflow:hidden;
+}
+
+.escena{
+    width:min(90vw,700px);
+}
+
+.barco{
+    width:100%;
+    display:block;
+
+    transform-origin:center bottom;
+
+    animation:navegar 6s ease-in-out infinite;
+
+    filter:drop-shadow(0 10px 15px rgba(0,0,0,.10));
+}
+
+@keyframes navegar{
+
+    0%{
+        transform:
+            translateY(0px)
+            rotate(-1.5deg);
+    }
+
+    25%{
+        transform:
+            translateY(-6px)
+            rotate(1deg);
+    }
+
+    50%{
+        transform:
+            translateY(0px)
+            rotate(-1.5deg);
+    }
+
+    75%{
+        transform:
+            translateY(4px)
+            rotate(1deg);
+    }
+
+    100%{
+        transform:
+            translateY(0px)
+            rotate(-1.5deg);
+    }
+
+}
+
+.escena{
+    position:relative;
+    width:min(90vw,700px);
+}
+
+@keyframes olas{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-40px);
+    }
+}

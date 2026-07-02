@@ -137,6 +137,59 @@ function tick(){
 tick(); 
 const timer=setInterval(tick,1000);  
 
+/* ---- Barco sorpresa ---- */
+
+const boatScreen = document.getElementById('boat-screen');
+const countdownPanel = document.querySelector('.countdown-panel');
+const countdownAudio = document.getElementById('countdown-audio');
+const contadorSection = document.getElementById('contador-section');
+
+let viajeIniciado = false;
+
+if(boatScreen){
+
+  boatScreen.addEventListener('click',()=>{
+
+    viajeIniciado = true;
+
+    countdownPanel.classList.add('started');
+
+    countdownAudio.play().catch(()=>{});
+
+  });
+
+}
+
+/* Música solo mientras se vea */
+
+if(contadorSection){
+
+  const observer = new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
+
+      if(!viajeIniciado) return;
+
+      if(entry.isIntersecting){
+
+        countdownAudio.play().catch(()=>{});
+
+      }else{
+
+        countdownAudio.pause();
+
+      }
+
+    });
+
+  },{
+    threshold:0.30
+  });
+
+  observer.observe(contadorSection);
+
+}
+
 /* ---- RSVP -> WhatsApp / email / Sheets ---- */  
 const seg=$('seg-asiste');  
 const sendBtn=$('rsvp-send'), rstatus=$('rsvp-status');  
