@@ -379,28 +379,6 @@ sendBtn.addEventListener('click',async ()=>{
     mensaje:$('f-msg').value.trim()  
   };  
 
-  // Alternativas WhatsApp / email  
-  if(CONFIG.rsvp.modo==='whatsapp'||CONFIG.rsvp.modo==='email'){  
-    const invitadosTxt=invitados.length?`  
-Invitados:  
-${invitados.map(i=>`- ${i.nombre}: ${i.tipoMenu} · ${i.menu}`).join('\n')}`:'';  
-
-    const texto=`¡Hola! Confirmo para vuestra boda.  
-Nombre: ${datos.nombre}  
-Asistencia: ${datos.asiste}${datos.menu?`  
-Menú principal: ${datos.menu}`:''}  
-Total asistentes: ${datos.acompanantes}${invitadosTxt}${datos.alergias?`  
-Alergias: ${datos.alergias}`:''}${datos.mensaje?`  
-Mensaje: ${datos.mensaje}`:''}`;  
-
-    if(CONFIG.rsvp.modo==='email'){
-      location.href=`mailto:${CONFIG.rsvp.destino}?subject=${encodeURIComponent('Confirmación de asistencia')}&body=${encodeURIComponent(texto)}`;
-    }else{
-      window.open(`https://wa.me/${CONFIG.rsvp.destino}?text=${encodeURIComponent(texto)}`,'_blank');
-    }  
-    return;  
-  }  
-
   // Modo Google Sheets  
   sendBtn.disabled=true; 
   showStatus('Enviando…');  
