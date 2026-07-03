@@ -700,7 +700,16 @@ footer .sun-mini{
 /*.envelope-gate.is-unfolding{}*/
 
 .envelope-gate.is-hiding{
-  opacity:0;transform:scale(1.05);filter:blur(8px);
+  opacity:0;
+
+  transform:scale(1.18);
+
+  filter:blur(24px);
+
+  transition:
+    opacity 1.2s ease,
+    transform 1.2s ease,
+    filter 1.2s ease;
 }
 
 body.envelope-locked header,
@@ -848,6 +857,72 @@ body.loading {
     width:60%;
     height:1px;
     background:rgba(200,150,140,.4);
+  }
+
+  /* =========================
+     SOBRE FULLSCREEN MÓVIL
+     ========================= */
+
+  .envelope-stage{
+    width:100vw;
+    height:100svh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    perspective:2200px;
+  }
+
+  .envelope-card{
+    position:fixed;
+
+    inset:0;
+
+    width:100vw;
+    height:100svh;
+
+    max-width:none;
+    max-height:none;
+
+    border-radius:0;
+
+    background-size:cover;
+    background-position:center;
+
+    box-shadow:none;
+
+    animation:none;
+  }
+
+  .envelope-flap{
+    height:62%;
+
+    background-size:cover;
+    background-position:center top;
+
+    clip-path:polygon(
+      0 0,
+      100% 0,
+      50% 100%
+    );
+  }
+
+  .wax-seal{
+    width:110px;
+    height:110px;
+
+    left:50%;
+    top:54%;
+  }
+
+  .envelope-hint{
+    top:30%;
+    z-index:10;
+
+    font-size:.75rem;
+
+    letter-spacing:.35em;
   }
 
 }
