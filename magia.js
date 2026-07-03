@@ -621,3 +621,50 @@ if(gate && btn){
 
   });
 }
+
+
+
+if(window.innerWidth <= 640){
+
+  const intro = document.getElementById('mobile-intro');
+  const cover = document.getElementById('mobile-cover');
+  const video = document.getElementById('mobile-video');
+  const fade = document.getElementById('mobile-fade');
+
+  if(intro && cover && video){
+
+    cover.addEventListener('click',()=>{
+
+      cover.style.display='none';
+
+      video.style.opacity='1';
+
+      video.play();
+
+    });
+
+    video.addEventListener('ended',()=>{
+
+      fade.style.opacity='1';
+
+      setTimeout(()=>{
+
+        intro.remove();
+
+        document.body.classList.remove('envelope-locked');
+
+      },900);
+
+    });
+
+  }
+
+video.addEventListener('ended',()=>{
+
+    intro.remove();
+    document.body.classList.remove('envelope-locked');
+    console.log('Video ended, intro removed.');
+});
+
+}
+
