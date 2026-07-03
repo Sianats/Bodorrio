@@ -626,10 +626,18 @@ if(gate && btn){
 
 if(window.innerWidth <= 640){
 
+    const gate = document.getElementById('envelope-gate');
+
+    if (gate) {
+        gate.remove();
+    }
+
+    document.body.classList.remove('envelope-locked');
+
+
   const intro = document.getElementById('mobile-intro');
   const cover = document.getElementById('mobile-cover');
   const video = document.getElementById('mobile-video');
-  const fade = document.getElementById('mobile-fade');
 
   if(intro && cover && video){
 
@@ -643,35 +651,31 @@ if(window.innerWidth <= 640){
 
     });
 
+    video.addEventListener('timeupdate',()=>{
+
+    const restante =
+        video.duration - video.currentTime;
+
+    if(restante < 0.5){
+
+        intro.classList.add('hide');
+
+    }
+
+});
+
     video.addEventListener('ended',()=>{
 
-      fade.style.opacity='1';
+      intro.classList.add('hide');
 
       setTimeout(()=>{
 
-        intro.remove();
+          intro.remove();
 
-        document.body.classList.remove('envelope-locked');
-
-      },900);
+      },800);
 
     });
 
   }
 
-video.addEventListener('ended',()=>{
-
-    fade.style.opacity='1';
-
-    setTimeout(()=>{
-
-        intro.remove();
-
-        document.body.classList.remove('envelope-locked');
-
-    },800);
-
-});
-
 }
-

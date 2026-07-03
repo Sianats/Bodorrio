@@ -21,14 +21,6 @@
   --ease:cubic-bezier(.2,.7,.2,1);
 }
 
-@font-face{
-  font-family:"BrittanySignature";
-  src:url("font/BrittanySignature.ttf") format("truetype");
-  font-weight:normal;
-  font-style:normal;
-}
-
-
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:var(--body);color:var(--tinta);line-height:1.65;background:#FFF8F3;-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -1011,6 +1003,13 @@ body.loading {
   filter:drop-shadow(0 10px 15px rgba(0,0,0,.10));
 }
 
+
+.escena{
+    width:75vw;
+    max-width:280px;
+  }
+
+
 @keyframes navegar{
   0%{
     transform:
@@ -1089,7 +1088,17 @@ body.loading {
     align-items:center;
     justify-content:center;
     overflow:hidden;
+    
+opacity:1;
+    transition:opacity .8s ease;
+
   }
+
+  
+  #mobile-intro.hide{
+      opacity:0;
+  }
+
 
   #mobile-cover,
   #mobile-video{
