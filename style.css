@@ -539,6 +539,14 @@ footer .sun-mini{
   appearance: none;
   -webkit-appearance: none;
 
+  
+  transition:
+    transform 1.2s ease,
+    filter 1.2s ease,
+    opacity 1.2s ease;
+  
+
+
 }
 
 .envelope-hint{
@@ -697,11 +705,35 @@ footer .sun-mini{
 .envelope-gate.is-opening .envelope-letter{transform:translateY(-40%)}
 .envelope-gate.is-opening .wax-seal {opacity: 0;transform: scale(0);}
 
+.envelope-gate.is-opening .envelope-card{
+
+  transform:
+    scale(1.12);
+
+  filter:
+    blur(8px);
+
+  opacity:.35;
+}
+
+
 /*.envelope-gate.is-unfolding{}*/
 
+
 .envelope-gate.is-hiding{
-  opacity:0;transform:scale(1.05);filter:blur(8px);
+
+  opacity:0;
+
+  transform:
+    scale(1.25);
+
+  filter:
+    blur(20px);
+
+  transition:
+    all 1.4s ease;
 }
+
 
 body.envelope-locked header,
 body.envelope-locked section{opacity:0;transform:scale(.98);
@@ -849,6 +881,14 @@ body.loading {
     height:1px;
     background:rgba(200,150,140,.4);
   }
+  
+  .envelope-card{
+    width:92vw;
+    max-width:420px;
+
+    height:auto;
+  }
+
 
 }
 
