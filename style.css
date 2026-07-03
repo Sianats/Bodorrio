@@ -539,14 +539,6 @@ footer .sun-mini{
   appearance: none;
   -webkit-appearance: none;
 
-  
-  transition:
-    transform 1.2s ease,
-    filter 1.2s ease,
-    opacity 1.2s ease;
-  
-
-
 }
 
 .envelope-hint{
@@ -622,7 +614,6 @@ footer .sun-mini{
 /* CARTA */
 .envelope-letter{
   position:absolute;
-  display:none;
   width:86%;
   left:7%;
   bottom:38px;
@@ -706,36 +697,11 @@ footer .sun-mini{
 .envelope-gate.is-opening .envelope-letter{transform:translateY(-40%)}
 .envelope-gate.is-opening .wax-seal {opacity: 0;transform: scale(0);}
 
-.envelope-gate.is-opening .envelope-card{
-
-  transform:
-    scale(1.12);
-
-  filter:
-    blur(8px);
-
-  opacity:.35;
-}
-
-
 /*.envelope-gate.is-unfolding{}*/
 
-
 .envelope-gate.is-hiding{
-  opacity:0;
-
-  transform:
-    scale(1.15);
-
-  filter:
-    blur(18px);
-
-  transition:
-    opacity .9s ease,
-    transform 1.1s ease,
-    filter 1.1s ease;
+  opacity:0;transform:scale(1.05);filter:blur(8px);
 }
-
 
 body.envelope-locked header,
 body.envelope-locked section{opacity:0;transform:scale(.98);
@@ -883,14 +849,6 @@ body.loading {
     height:1px;
     background:rgba(200,150,140,.4);
   }
-  
-  .envelope-card{
-    width:92vw;
-    max-width:420px;
-
-    height:auto;
-  }
-
 
 }
 
