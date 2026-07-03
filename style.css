@@ -91,10 +91,30 @@ nav .links a.cta:hover{
 .eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.32em;text-transform:uppercase}
 
 /* ---------- HERO ---------- */
-.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;align-items:center;text-align:center;overflow:hidden}
-.hero-scene{position:absolute;left:0;right:0;bottom:0;z-index:0;pointer-events:none}
-.hero-scene svg{width:100%;height:auto}
+.hero{
+  position:relative;
+  min-height:100svh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  overflow:hidden;
+
+  background-image:url("herosionpc.png");
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+}
 .hero-inner{position:relative;z-index:2;width:100%;max-width:1080px;padding:clamp(1.4rem,4vw,2.4rem) 1.4rem 0}
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:rgba(255,248,243,0.08);
+
+  pointer-events:none;
+}
 .hero-top{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;opacity:0;animation:fade 1s var(--ease) .2s forwards}
 .coast-tag{font-family:var(--mono);font-size:.64rem;letter-spacing:.16em;line-height:1.7;text-align:left;text-shadow:0 1px 14px rgba(0,0,0,.4)}
 .coast-tag.r{text-align:right}
@@ -118,7 +138,7 @@ nav .links a.cta:hover{
 .amp .y{font-family:var(--display);font-style:italic;font-weight:300;font-size:clamp(1rem,3.2vw,1.6rem);letter-spacing:.04em;opacity:.92}
 .amp .rule{width:clamp(28px,7vw,60px);height:1px;background:linear-gradient(90deg,transparent,var(--sol-claro),transparent)}
 .hero-date{margin-top:1.4rem;font-family:var(--mono);font-size:.8rem;letter-spacing:.34em;text-transform:uppercase;opacity:0;animation:fade 1s var(--ease) 1.2s forwards;text-shadow:0 1px 14px rgba(0,0,0,.4)}
-.scroll-cue{position:absolute;bottom:1.1rem;left:50%;transform:translateX(-50%);z-index:3;font-family:var(--mono);font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;opacity:0;display:flex;flex-direction:column;align-items:center;gap:.4rem;animation:fade 1s var(--ease) 1.6s forwards}
+.scroll-cue{position:absolute;bottom:8vh;left:50%;transform:translateX(-50%);z-index:3;font-family:var(--mono);font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;opacity:0;display:flex;flex-direction:column;align-items:center;gap:.4rem;animation:fade 1s var(--ease) 1.6s forwards}
 .scroll-cue .line{width:1px;height:34px;background:currentColor;animation:cue 2.2s ease-in-out infinite}
 @keyframes cue{0%,100%{transform:scaleY(.35);transform-origin:top;opacity:.4}50%{transform:scaleY(1);opacity:1}}
 @keyframes fade{to{opacity:1}}
@@ -310,8 +330,18 @@ nav .brand img{
 /* Vestimenta */
 .dress{text-align:center;margin-top:1.4rem}
 .dress p{max-width:44ch;margin:0 auto;opacity:.9}
-.swatches{display:flex;justify-content:center;gap:.7rem;margin-top:1.8rem;flex-wrap:wrap}
-.swatch{width:46px;height:46px;border-radius:50%;border:2px solid rgba(244,239,228,.4)}
+
+.dresscode{
+    width:55%;
+    max-width:450px;
+    display:block;
+    margin:auto;
+
+    transform:
+        scale(1.35)
+        translateY(-40px);
+}
+
 
 /* Regalo */
 .gift{text-align:center;margin-top:1.4rem}
@@ -1126,4 +1156,15 @@ opacity:1;
   body.envelope-locked .envelope-gate{
     display:none;
   }
+  
+  .hero{
+
+    background-image:url("herosionmovil.png");
+
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+
+  }
+
 }

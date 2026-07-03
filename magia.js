@@ -102,8 +102,6 @@ $('plan').innerHTML=CONFIG.itinerario.map(i=>
 $('viaje-cards').innerHTML=CONFIG.viaje.map(c=>  
   `<div class="card"><div class="ico">${c.ico}</div><h4>${c.titulo}</h4><p>${c.texto}</p></div>`).join('');  
 
-$('swatches').innerHTML=CONFIG.vestimenta.paleta.map(c=>`<span class="swatch" style="background:${c}"></span>`).join('');  
-
 $('faq').innerHTML=CONFIG.faq.map(f=>  
   `<details><summary>${f.q}</summary><div class="a">${f.a}</div></details>`).join('');  
 
