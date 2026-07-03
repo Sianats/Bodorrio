@@ -100,7 +100,7 @@ nav .links a.cta:hover{
   text-align:center;
   overflow:hidden;
 
-  background-image:url("herosionpc.png");
+  background-image:url("./Media/herosionpc.png");
   background-size:cover;
   background-position:center center;
   background-repeat:no-repeat;
@@ -263,7 +263,7 @@ opacity:.7;filter:blur(1.5px)}
   z-index:0;
 }
 .place .ceremonia::before{
-  background-image:url('daltvila.png');
+  background-image:url('./Media/daltvila.png');
   background-size:90%;
   background-position:center 65%;
 }
@@ -289,7 +289,7 @@ nav .brand img{
 }
 
 .place .convite::before{
-  background-image:url('casa.png');
+  background-image:url('./Media/casa.png');
 }
 .place .divider{
   width:1px;
@@ -491,256 +491,47 @@ footer .sun-mini{
   .names .n,.hero-top,.hero-eyebrow,.amp,.hero-date,.scroll-cue{opacity:1!important;animation:none!important}
 }
 
-
-.envelope-gate{
+#desktop-envelope{
   position:fixed;
   inset:0;
-  z-index:9999;
 
-  display:grid;
-  place-items:center;
+  z-index:10000;
 
-  /* tu imagen floral */
-  background-image:
-    linear-gradient(
-      rgba(255,248,243,.82),
-      rgba(255,248,243,.82)
-    ),
-    url("fondo-floral.png");
-
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
+  overflow:hidden;
 
   transition:
     opacity 1.2s ease,
-    transform 1.2s ease,
     filter 1.2s ease;
 }
 
-.envelope-gate::before{
-  content:"";
+#desktop-envelope.closing{
+  opacity:0;
+  filter:blur(10px);
+}
 
+#desktop-envelope-img,
+#desktop-envelope-video{
   position:absolute;
   inset:0;
 
-  background:
-    url("fondo-floral.png");
+  width:100%;
+  height:100%;
 
-  background-size:cover;
-  background-position:center;
+  object-fit:cover;
+}
 
-  opacity:.12;
+#desktop-envelope-img{
+  display:block;
+  cursor:pointer;
+}
 
-  pointer-events:none;
+#desktop-envelope-video{
+  display:none;
 }
 
 /* perspectiva para profundidad */
 .envelope-stage{
   perspective:1400px;
-}
-
-/* SOBRE BASE */
-.envelope-card{
-  position:relative;
-  width:340px;
-  height:220px;
-
-  background-image: url("papel.png");
-  background-size: 110%;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  border-radius:8px;
-
-  /* sombra elegante (no marco) */
-  box-shadow:
-    0 25px 50px rgba(0,0,0,0.18),   /* sombra principal */
-    0 6px 12px rgba(0,0,0,0.12);    /* contacto */
-
-  cursor:pointer;
-  overflow:hidden;
-
-  animation:float 4s ease-in-out infinite;
-
-  
-  border: none !important;
-  outline: none !important;
-  background-color: transparent; /* por si acaso */
-  appearance: none;
-  -webkit-appearance: none;
-
-}
-
-.envelope-hint{
-  position:absolute;
-
-  left:50%;
-  bottom:18%;
-
-  transform:translateX(-50%) rotate(-3deg);
-
-  font-family:"Cormorant Garamond", serif;
-  font-style:italic;
-  font-weight:400;
-
-  font-size:2rem;
-
-  color:rgba(120,100,90,.72);
-
-  white-space:nowrap;
-
-  z-index:5;
-
-  pointer-events:none;
-}
-
-@keyframes floatHint{
-  0%,100%{
-    transform:translateX(-50%) translateY(0);
-  }
-  50%{
-    transform:translateX(-50%) translateY(-4px);
-  }
-}
-
-/* BORDE INTERNO sutil para dar forma */
-.envelope-card::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  border-radius:8px;
-
-  box-shadow:
-    inset 0 0 0 1px rgba(0,0,0,0.06),     /* borde sutil tipo papel */
-    inset 0 8px 18px rgba(255,255,255,0.25),
-    inset 0 -10px 20px rgba(0,0,0,0.08);
-
-  pointer-events:none;
-}
-
-/* SOLAPA SUPERIOR (realista) */
-.envelope-flap{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:55%;
-
-  background-image: url("2.png");
-  background-size: 110%;     /* 🔥 clave */
-  background-position: center;  /* centra la textura */
-  background-repeat: no-repeat;
-
-  clip-path:polygon(0 0,100% 0,50% 100%);
-  transform-origin:top;
-  transition:transform 0.9s cubic-bezier(.65,.05,.36,1);
-
-  box-shadow:
-    inset 0 -2px 6px rgba(0,0,0,0.12);
-  z-index:3;
-}
-
-
-/* CARTA */
-.envelope-letter{
-  position:absolute;
-  width:86%;
-  left:7%;
-  bottom:38px;
-  background:#fff;
-  padding:1.2rem;
-  border-radius:4px;
-
-  box-shadow:
-    0 10px 25px rgba(0,0,0,0.18);
-
-  transform:translateY(55%);
-  transition:
-    transform 1s cubic-bezier(.65,.05,.36,1),
-    opacity .6s ease;
-
-  z-index:2;
-}
-
-/* EFECTO PAPEL */
-.envelope-card::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  border-radius:8px;
-
-  box-shadow:
-    inset 0 10px 20px rgba(255,255,255,0.25),
-    inset 0 -12px 24px rgba(0,0,0,0.08);
-
-  pointer-events:none;
-}
-
-/* SELLO DE CERA (más real) */
-.wax-seal {
-  position: absolute;
-  left: 50%;
-  top: 58%;
-  transform: translate(-50%, -50%);
-  width: 90px;   /* ajusta según gusto */
-  height: 90px;
-  z-index: 4;
-  pointer-events: none;
-  transition: all .6s ease;
-}
-
-.wax-seal img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  filter: 
-    drop-shadow(0 6px 10px rgba(0,0,0,0.25))
-    contrast(1.05)
-    brightness(0.98);
-}
-
-/* CUANDO SE ABRE */
-.envelope-card.open .envelope-flap{
-  transform:rotateX(160deg);
-}
-
-.envelope-card.open .envelope-letter{
-  transform:translateY(-20%);
-}
-
-/* HOVER SUTIL (mejora UX móvil y desktop) */
-.envelope-card:hover{
-  transform:translateY(-5px) scale(1.02);
-}
-
-
-.envelope-card:focus,
-.envelope-card:active,
-.envelope-card:focus-visible {
-  outline: none;
-  box-shadow: none;
-}
-
-
-
-.envelope-gate.is-opening .envelope-flap{transform:rotateX(180deg)}
-.envelope-gate.is-opening .envelope-letter{transform:translateY(-40%)}
-.envelope-gate.is-opening .wax-seal {opacity: 0;transform: scale(0);}
-
-/*.envelope-gate.is-unfolding{}*/
-
-.envelope-gate.is-hiding{
-  opacity:0;
-
-  transform:scale(1.18);
-
-  filter:blur(24px);
-
-  transition:
-    opacity 1.2s ease,
-    transform 1.2s ease,
-    filter 1.2s ease;
 }
 
 body.envelope-locked header,
@@ -1159,7 +950,7 @@ opacity:1;
   
   .hero{
 
-    background-image:url("herosionmovil.png");
+    background-image:url("./Media/herosionmovil.png");
 
     background-size:cover;
     background-position:center center;

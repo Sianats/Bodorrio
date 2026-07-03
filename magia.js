@@ -36,7 +36,7 @@ const CONFIG = {
     {ico:"Detalle", titulo:"Desplazamiento", texto:"Con alcohol de por medio, siempre es mejor ir en taxi o designar al sobrio del grupo... </br> ¡Suerte a esa persona!"},  
   ],  
   vestimenta:{titulo:"Semi-formal",   
-    texto:"Colores primaverales, rebequita y zapato cómodo: habrá césped, baile y mucho alcohol. Aunque el blanco no está en la lista, aquí hay recomendaciones que no os harán desentonar:",  
+    texto:"Colores primaverales, rebequita y zapato cómodo: habrá césped, baile y mucho alcohol. Aunque el blanco no está en la lista, aquí hay recomendaciones que no os harán desentonar:",
     paleta:["#DD874E","#EAAF7A","#D65A57","#E7C878","#B9B45E","#9E92A6","#9AA8BC"]},  
   regalo:{texto:"Lo importante es que estéis con nosotros ese día. Si además queréis tener un detalle, hemos dejado esta opción por si os resulta más cómoda que el formato 'sobre' tradicional.",  
     opciones:[  
@@ -586,45 +586,15 @@ if(reduce){
   })();  
 }
 
-/* ---- SOBRE SUAVE ---- */
-
-const gate=document.getElementById('envelope-gate');
-const btn=document.getElementById('open-envelope');
-
-if(gate && btn){
-  btn.addEventListener('click',()=>{
-
-    if(gate.classList.contains('is-opening')) return;
-
-    gate.classList.add('is-opening');
-
-    gate.addEventListener('transitionend',function handler(){
-
-      if(!gate.classList.contains('is-opening')) return;
-
-      gate.removeEventListener('transitionend',handler);
-
-      gate.classList.add('is-unfolding');
-
-      requestAnimationFrame(()=>{
-        gate.classList.add('is-hiding');
-        document.body.classList.remove('envelope-locked');
-      });
-
-      setTimeout(()=>{
-        gate.style.display='none';
-      },600);
-
-    });
-
-  });
-}
-
-
-
 if(window.innerWidth <= 640){
 
     const gate = document.getElementById('envelope-gate');
+    const desktopEnvelope = document.getElementById('desktop-envelope');
+
+    if(desktopEnvelope){
+        desktopEnvelope.remove();
+    }
+
 
     if (gate) {
         gate.remove();
@@ -677,3 +647,48 @@ if(window.innerWidth <= 640){
   }
 
 }
+
+const envImg = document.getElementById("desktop-envelope-img");
+const envVideo = document.getElementById("desktop-envelope-video");
+const envContainer = document.getElementById("desktop-envelope");
+
+if(envImg && envVideo && envContainer){
+
+  envImg.addEventListener("click",()=>{
+
+    envImg.style.display="none";
+
+    envVideo.style.display="block";
+
+    envVideo.play();
+
+  });
+
+  envVideo.addEventListener("ended",()=>{
+
+    envContainer.classList.add("closing");
+
+    setTimeout(()=>{
+
+      envContainer.remove();
+
+      document.body.classList.remove("envelope-locked");
+
+    },1200);
+
+  });
+
+}
+
+envVideo.addEventListener("ended",()=>{
+
+  envContainer.classList.add("closing");
+
+  setTimeout(()=>{
+
+    envContainer.remove();
+    document.body.classList.remove("envelope-locked");
+
+  },1200);
+
+});

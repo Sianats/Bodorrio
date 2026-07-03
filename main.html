@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="JA.png">
+  <link rel="icon" type="image/png" href="./Media/JA.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Mulish:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -19,7 +19,7 @@
 <div id="mobile-intro">
 
   <img
-    src="sobre.png"
+    src="./Media/sobre.png"
     id="mobile-cover"
     alt="Sobre">
 
@@ -27,29 +27,25 @@
     id="mobile-video"
     playsinline
     preload="auto">
-      <source src="sobrefadelento.mp4" type="video/mp4">
+      <source src="./Media/sobrefadelento.mp4" type="video/mp4">
   </video>
 </div>
 
 
-<div class="envelope-gate" id="envelope-gate">
+<div id="desktop-envelope">
 
-  <div class="envelope-hint">
-    Esta invitación es exclusiva para ti
-  </div>
+  <img
+    id="desktop-envelope-img"
+    src="./Media/sobrepc.png"
+    alt="Abrir invitación">
 
-  <div class="envelope-stage">
-    <button class="envelope-card" id="open-envelope" type="button">
-      <span class="envelope-back"></span>
+  <video
+    id="desktop-envelope-video"
+    playsinline
+    preload="auto">
+      <source src="./Media/aperturapc.mp4" type="video/mp4">
+  </video>
 
-      <span class="envelope-front"></span>
-      <span class="envelope-flap"></span>
-
-      <span class="wax-seal">
-        <img src="4.png" alt="Sello de cera">
-      </span>
-    </button>
-  </div>
 </div>
 
 <div id="sky"></div>
@@ -61,7 +57,7 @@
 
   <nav id="nav" aria-label="Navegación">
     <a class="brand" href="#inicio">
-      <img src="JA.png" alt="Sello">
+      <img src="./Media/JA.png" alt="Sello">
     </a>
 
     <div class="links">
@@ -160,7 +156,7 @@
     </div>
 
     <audio id="countdown-audio" preload="auto">
-      <source src="camela.mp3" type="audio/mpeg">
+      <source src="./Media/camela.mp3" type="audio/mpeg">
     </audio>
 
   </div>
@@ -276,8 +272,8 @@
       <h2 class="title" id="t-dress-title"></h2>
 
       <div class="dress">
-        <p id="t-dress-text" style="text-align: justify"></p>
-          <img src="dresscode.png" class="dresscode" alt="vestimenta">
+        <p id="t-dress-text" style="text-align: justify"></p><br>
+          <img src="./Media/dresscode.png" class="dresscode" alt="vestimenta">
       </div>
     </div>
   </section>
