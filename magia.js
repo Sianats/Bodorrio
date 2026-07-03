@@ -661,9 +661,16 @@ if(window.innerWidth <= 640){
 
 video.addEventListener('ended',()=>{
 
-    intro.remove();
-    document.body.classList.remove('envelope-locked');
-    console.log('Video ended, intro removed.');
+    fade.style.opacity='1';
+
+    setTimeout(()=>{
+
+        intro.remove();
+
+        document.body.classList.remove('envelope-locked');
+
+    },800);
+
 });
 
 }
