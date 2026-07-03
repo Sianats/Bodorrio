@@ -460,14 +460,48 @@ footer .sun-mini{
   .names .n,.hero-top,.hero-eyebrow,.amp,.hero-date,.scroll-cue{opacity:1!important;animation:none!important}
 }
 
+
 .envelope-gate{
   position:fixed;
   inset:0;
   z-index:9999;
+
   display:grid;
   place-items:center;
-  background:#FFF8F3;
-  transition:opacity 1.2s ease, transform 1.2s ease, filter 1.2s ease;
+
+  /* tu imagen floral */
+  background-image:
+    linear-gradient(
+      rgba(255,248,243,.82),
+      rgba(255,248,243,.82)
+    ),
+    url("fondo-floral.png");
+
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+
+  transition:
+    opacity 1.2s ease,
+    transform 1.2s ease,
+    filter 1.2s ease;
+}
+
+.envelope-gate::before{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:
+    url("fondo-floral.png");
+
+  background-size:cover;
+  background-position:center;
+
+  opacity:.12;
+
+  pointer-events:none;
 }
 
 /* perspectiva para profundidad */
@@ -505,6 +539,38 @@ footer .sun-mini{
   appearance: none;
   -webkit-appearance: none;
 
+}
+
+.envelope-hint{
+  position:absolute;
+
+  left:50%;
+  top:calc(50% - 180px);
+
+  transform:translateX(-50%);
+
+  font-family:var(--mono);
+
+  font-size:.7rem;
+
+  letter-spacing:.35em;
+
+  color:#A06A64;
+
+  opacity:.75;
+
+  text-transform:uppercase;
+
+  animation:floatHint 2.5s ease-in-out infinite;
+}
+
+@keyframes floatHint{
+  0%,100%{
+    transform:translateX(-50%) translateY(0);
+  }
+  50%{
+    transform:translateX(-50%) translateY(-4px);
+  }
 }
 
 /* BORDE INTERNO sutil para dar forma */
