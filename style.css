@@ -534,12 +534,6 @@ footer .sun-mini{
   perspective:1400px;
 }
 
-body.envelope-locked header,
-body.envelope-locked section{opacity:0;transform:scale(.98);
-transition:all 1.2s ease}
-
-body:not(.envelope-locked) header,
-body:not(.envelope-locked) section{opacity:1;transform:scale(1)}
 
 .nav-sep{
   display:none;
@@ -563,11 +557,6 @@ body:not(.envelope-locked) section{opacity:1;transform:scale(1)}
   nav .links a{
     white-space:nowrap;
   }
-}
-
-body.loading {
-  visibility: hidden;
-  opacity: 0;
 }
 
 @media(max-width:640px){
@@ -958,4 +947,106 @@ opacity:1;
 
   }
 
+}
+
+/* =========================
+   BLOQUEO DE SCROLL DURANTE SOBRE
+   ========================= */
+
+body.envelope-locked {
+  overflow: hidden;
+}
+
+#mobile-intro,
+#desktop-envelope {
+  touch-action: none;
+}
+
+/* Seguridad: nunca ocultes la web por la clase envelope-locked */
+body.envelope-locked header,
+body.envelope-locked section,
+body.envelope-locked footer {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Desktop: sobre de PC visible solo en PC */
+#desktop-envelope {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  overflow: hidden;
+  background: #FFF8F3;
+}
+
+#desktop-envelope-img,
+#desktop-envelope-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#desktop-envelope-img {
+  display: block;
+  cursor: pointer;
+}
+
+#desktop-envelope-video {
+  display: none;
+}
+
+/* Móvil */
+#mobile-intro {
+  display: none;
+}
+
+@media (max-width:640px) {
+  #desktop-envelope {
+    display: none;
+  }
+
+  #mobile-intro {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background: #FFF8F3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    opacity: 1;
+    transition: opacity .8s ease;
+  }
+
+  #mobile-intro.hide {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  #mobile-cover,
+  #mobile-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #mobile-cover {
+    display: block;
+  }
+
+  #mobile-video {
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@media (min-width:641px) {
+  #mobile-intro {
+    display: none !important;
+  }
 }
