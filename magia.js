@@ -14,19 +14,51 @@ const CONFIG = {
   },  
   distancia:"1.700 km",  
   historia:[  
-    {when:"El principio", head:"Dos islas, un encuentro", body:"Ella creció con los pies en el Mediterráneo; él, sobre roca volcánica. El mapa los tenía lejos, pero el destino no."},  
-    {when:"El camino", head:"Mil kilómetros de mar", body:"Vuelos, mensajes y escapadas. Aprendimos que el hogar no es una isla: es la persona."},  
-    {when:"El momento", head:"El siguiente paso", body:"Con todo lo vivido, decidimos apostar por nosotros."},  
+    {
+      when:"El principio",
+      head:"Todo empezó en la universidad",
+      body:"Ella de Ibiza y él de Lanzarote, pero los unió Madrid. Entre clases, amigos y planes de universidad, acabamos cruzándonos en el momento adecuado."
+    },
+    {
+      when:"El camino",
+      head:"Construyendo nuestro hogar",
+      body:"A lo largo de estos años hemos vivido en distintas ciudades, recorrido muchos kilómetros y pasado por etapas muy diferentes. Algunas cosas han cambiado mucho; otras, por suerte, no."
+    },
+    {
+      when:"Hasta hoy",
+      head:"Siete años después",
+      body:"Tras todo lo vivido juntos, ha llegado el momento de reunir a las personas que más queremos y con quien hemos tenido la suerte de vivir todas esas etapas y momentos caóticos para celebrar el siguiente paso de esta historia."
+    }
   ],  
   lugar:{nombre:"Dalt Vila", direccion:"Plaça de la Catedral, 1, 07800 Eivissa, Illes Balears",  
          mapaURL:"https://maps.app.goo.gl/wqo9e8dKhwTPpv9H6"},  
   convite:{nombre:"Can Curreu", direccion:"Diseminado P 4 San Carlos, 79, 07850, Illes Balears",  
          mapaURL:"https://maps.app.goo.gl/N8NfjNphF6gvEHzXA"},  
-  itinerario:[  
-    {hora:"12:00", titulo:"Ceremonia", sub:"Al Mediodia"},  
-    {hora:"14:00", titulo:"Cóctel", sub:"En una Casa Payesa"},  
-    {hora:"16:00", titulo:"Comida", sub:"Entre pinos y olivos"},  
-    {hora:"18:30", titulo:"Fiesta", sub:"Hasta que caiga el sol"},  
+  itinerario:[
+    {
+      hora:"12:00",
+      titulo:"Ceremonia nupcial",
+      sub:"Catedral de Santa María, Dalt Vila",
+      icono:"./Media/anillos.png"
+    },
+    {
+      hora:"14:00",
+      titulo:"Recepción",
+      sub:"Can Curreu, San Carlos",
+      icono:"./Media/bebida.png"
+    },
+    {
+      hora:"16:00",
+      titulo:"Comida",
+      sub:"Entre pinos y olivos",
+      icono:"./Media/plato.png"
+    },
+    {
+      hora:"18:30",
+      titulo:"Fiesta",
+      sub:"Hasta que caiga el sol",
+      icono:"./Media/musica.png"
+    },
   ],  
   viajeIntro:"Venís de lejos y nos hace mucha ilusión. Aquí tenéis lo esencial para organizar el viaje.",  
   viaje:[  
@@ -96,9 +128,31 @@ document.title=`J & A`;
 $('story').innerHTML=CONFIG.historia.map(b=>  
   `<div class="beat"><div class="dot"></div><div><div class="when">${b.when}</div><div class="head">${b.head}</div><div class="body">${b.body}</div></div></div>`).join('');  
 
-$('plan').innerHTML=CONFIG.itinerario.map(i=>  
-  `<div class="item"><div class="t">${i.hora}</div><div class="ev"><span class="h">${i.titulo}</span>${i.sub?` <span class="s">· ${i.sub}</span>`:''}</div></div>`).join('');  
+$('plan').innerHTML = CONFIG.itinerario.map((i, index) => `
+  <div class="timeline-item reveal ${index % 2 === 0 ? 'icon-left' : 'icon-right'}">
 
+    <div class="timeline-visual">
+      <img src="${i.icono}" alt="${i.titulo}">
+    </div>
+
+    <div class="timeline-dot"></div>
+
+    <div class="timeline-text">
+      <div class="timeline-hour">${i.hora}</div>
+
+      <div class="timeline-event">
+        <div class="timeline-title">${i.titulo}</div>
+
+        ${i.sub
+          ? `<div class="timeline-sub">${i.sub}</div>`
+          : ''
+        }
+
+      </div>
+    </div>
+
+  </div>
+`).join('');
 $('viaje-cards').innerHTML=CONFIG.viaje.map(c=>  
   `<div class="card"><div class="ico">${c.ico}</div><h4>${c.titulo}</h4><p>${c.texto}</p></div>`).join('');  
 
@@ -475,6 +529,30 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{
 }),{threshold:.12});  
 
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));  
+
+/* ---- Línea del plan que se dibuja con el scroll ---- */
+const planTimeline = document.getElementById('plan');
+
+function updatePlanTimelineProgress() {
+  if (!planTimeline) return;
+
+  const rect = planTimeline.getBoundingClientRect();
+  const viewportH = window.innerHeight || document.documentElement.clientHeight;
+
+  const start = viewportH * 0.75;
+  const end = viewportH * 0.25;
+
+  const total = rect.height + start - end;
+  const current = start - rect.top;
+
+  const progress = Math.min(1, Math.max(0, current / total));
+
+  planTimeline.style.setProperty('--plan-progress', `${progress * 100}%`);
+}
+
+window.addEventListener('scroll', updatePlanTimelineProgress, { passive: true });
+window.addEventListener('resize', updatePlanTimelineProgress);
+updatePlanTimelineProgress();
 
 /* ---- Estrellas ---- */  
 const starbox=$('stars');  
