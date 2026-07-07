@@ -174,19 +174,75 @@ color:#A06A64;
 .story .body{font-size:.97rem;opacity:.88}
 
 /* Islas */
-.islands{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,3vw,1.6rem);margin-top:1.4rem}
-.isla{position:relative;padding:1.9rem 1.6rem 1.7rem;border-radius:5px;color:#3A3A3A;overflow:hidden;min-height:210px;display:flex;flex-direction:column;justify-content:flex-end}
-.isla.ibiza{
-  background:linear-gradient(160deg,#BDE0FE,#A8DADC);
+.islands{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:4rem;
+  margin-top:2rem;
+  align-items:center;
 }
-.isla.lanza{
-  background:linear-gradient(160deg,#FBC4AB,#FDEAC2);
+
+.isla-shape{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
-.isla .who{color:#7A6A68;font-family:var(--mono);font-size:.64rem;letter-spacing:.26em;text-transform:uppercase;opacity:.85}
-.isla .name{color:#2F2F2F;font-family:var(--display);font-weight:400;font-size:clamp(1.7rem,5vw,2.4rem);margin:.2rem 0 .5rem;font-variation-settings:"opsz" 72,"SOFT" 50}
-.isla .desc{color:#4A4A4A;font-size:.93rem;opacity:.92;max-width:30ch}
-.isla .coords{color:#7A6A68;margin-top:1rem;font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;padding-top:.85rem;border-top:1px solid rgba(0,0,0,0.08);opacity:.85}
-.isla .accent{position:absolute;top:1.3rem;right:1.4rem;width:28px;height:28px;border-radius:50%}
+
+.isla-shape img{
+  width:100%;
+  max-width:380px;
+  height:auto;
+  pointer-events:none;
+  filter:
+    drop-shadow(0 10px 18px rgba(0,0,0,.08));
+}
+
+.isla-text{
+  position:absolute;
+  text-align:center;
+  color:#3A3A3A;
+  max-width:240px;
+}
+
+.isla-text .who{
+  font-family:var(--mono);
+  font-size:.65rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:#6a6a6a;
+}
+
+.isla-text .name{
+  font-family:var(--display);
+  font-size:clamp(2rem,4vw,2.8rem);
+  margin:.2rem 0;
+}
+
+.isla-text .desc{
+  font-size:.92rem;
+  line-height:1.45;
+}
+
+.isla-text .coords{
+  margin-top:.8rem;
+  font-family:var(--mono);
+  font-size:.65rem;
+  letter-spacing:.08em;
+}
+
+.ibiza-text{
+  top:43%;
+  left:55%;
+  transform:translate(-50%,-50%);
+}
+
+.lanza-text{
+  top:51%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
 .isla.ibiza .accent{
   background:radial-gradient(
     circle at 35% 30%,
@@ -1318,4 +1374,30 @@ body.envelope-locked footer {
   #mobile-intro {
     display: none !important;
   }
+}
+
+@media(max-width:640px){
+
+  .islands{
+    grid-template-columns:1fr;
+    gap:2rem;
+  }
+
+  .isla-shape img{
+    max-width:280px;
+    margin:auto;
+  }
+
+  .isla-text{
+    max-width:190px;
+  }
+
+  .isla-text .name{
+    font-size:1.8rem;
+  }
+
+  .isla-text .desc{
+    font-size:.82rem;
+  }
+
 }
