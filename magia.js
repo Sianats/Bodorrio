@@ -826,7 +826,7 @@ DTSTART:20270424T100000Z
 DTEND:20270424T220000Z
 SUMMARY:Juan y Anaïs se casan ♡
 LOCATION: Catedral de Santa Maria, Dalt Vila, Ibiza, Illes Balears
-DESCRIPTION: 12:00 Ceremonia - Dalt Vila & 14:00 Recepción - Can Curreu
+DESCRIPTION: 12:00 Ceremonia - Dalt Vila y 14:00 Recepción - Can Curreu
 END:VCALENDAR
 `.trim();
 
