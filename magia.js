@@ -823,10 +823,14 @@ BEGIN:VEVENT
 UID:${Date.now()}@anaisjuan.es
 DTSTAMP:20260709T120000Z
 DTSTART:20270424T100000Z
-DTEND:20270425T020000Z
-SUMMARY:Boda de Anaïs y Juan
-LOCATION:Catedral de Santa María, Dalt Vila, Ibiza
-DESCRIPTION:Ceremonia a las 12:00 y celebración posterior en Can Curreu.
+DTEND:20270425T220000Z
+SUMMARY:Juan y Anaïs se casan ♡
+LOCATION: https://maps.app.goo.gl/Fh6aZr1o8yQnMSGA9
+DESCRIPTION:
+12:00 Ceremonia - Dalt Vila
+Mapa ceremonia: https://maps.app.goo.gl/Fh6aZr1o8yQnMSGA9
+14:00 Recepción - Can Curreu
+Mapa recepción: https://maps.app.goo.gl/SqieV93TeywbcZ8K6
 END:VEVENT
 END:VCALENDAR
 `.trim();
