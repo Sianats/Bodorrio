@@ -807,3 +807,45 @@ if (isMobileEnvelope) {
 } else {
   initDesktopEnvelope();
 }
+
+const addCalendarBtn = document.getElementById('add-calendar');
+
+if (addCalendarBtn) {
+
+  addCalendarBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const ics = `
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AnaisJuanWedding//ES
+BEGIN:VEVENT
+UID:${Date.now()}@anaisjuan.es
+DTSTAMP:20260709T120000Z
+DTSTART:20270424T100000Z
+DTEND:20270425T020000Z
+SUMMARY:Boda de Anaïs y Juan
+LOCATION:Catedral de Santa María, Dalt Vila, Ibiza
+DESCRIPTION:Ceremonia a las 12:00 y celebración posterior en Can Curreu.
+END:VEVENT
+END:VCALENDAR
+`.trim();
+
+    const blob = new Blob([ics], {
+      type: 'text/calendar;charset=utf-8'
+    });
+
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'Boda_Anais_Juan.ics';
+
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+
+    URL.revokeObjectURL(url);
+  });
+
+}
