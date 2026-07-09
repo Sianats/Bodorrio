@@ -14,7 +14,7 @@
   --sol-claro:#FADCD9; 
   --rosa:#F7A8A4; 
   --noche:#FFF8F3; /* elimina sensación nocturna */
-  --maxw:920px;
+  --maxw:1200px;
   --display:"Fraunces",Georgia,serif;
   --body:"Mulish",system-ui,sans-serif;
   --mono:"Space Mono",ui-monospace,monospace;
@@ -232,8 +232,8 @@ color:#A06A64;
 }
 
 .ibiza-text{
-  top:43%;
-  left:55%;
+  top:50%;
+  left:49%;
   transform:translate(-50%,-50%);
 }
 
@@ -241,6 +241,70 @@ color:#A06A64;
   top:51%;
   left:50%;
   transform:translate(-50%,-50%);
+}
+
+/* ==================================================
+   POSTAL VIAJE
+   ================================================== */
+
+.travel-postcard{
+  
+    max-width:920px;
+    margin:auto;
+    background:rgba(244,239,228,.94);
+    padding:1rem;
+    border-radius:7px;
+    box-shadow: 40px 90px -45px*rgba(0,0,0,.35);
+}
+
+.desktop-only{
+    display:block;
+}
+
+.mobile-only{
+    display:none;
+}
+
+@media screen and (max-width:640px){
+
+    .desktop-only{
+        display:none !important;
+    }
+
+    .mobile-only{
+        display:block !important;
+    }
+}
+
+.travel-postcard img{
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+.travel-postcard-desktop{
+    display:block;
+}
+
+.travel-postcard-mobile{
+    display:none;
+    width:100%;
+    max-width:520px;
+    margin:auto;
+
+}
+
+/* móvil */
+@media (max-width:640px){
+
+    .travel-postcard-desktop{
+        display:none;
+    }
+
+    .travel-postcard-mobile{
+        display:block;
+    }
+
 }
 
 .isla.ibiza .accent{
@@ -1400,4 +1464,67 @@ body.envelope-locked footer {
     font-size:.82rem;
   }
 
+}
+
+/* =========================
+   POSTAL VIAJE
+   ========================= */
+
+#viaje-desktop{
+    display:block;
+    max-width:1200px;
+    margin:auto;
+}
+
+#viaje-desktop img{
+    width:100%;
+    display:block;
+}
+
+#viaje-mobile{
+    display:none;
+    max-width:520px;
+    margin:auto;
+}
+
+#viaje-mobile img{
+    width:100%;
+    display:block;
+}
+
+@media screen and (max-width: 900px){
+
+    #viaje-desktop{
+        display:none !important;
+    }
+
+    #viaje-mobile{
+        display:block !important;
+    }
+
+}
+
+/* =========================
+   VIAJE - MARCO MÁS FINO
+   ========================= */
+
+#viaje .travel-wrapper{
+    padding: 12px;
+}
+
+@media (max-width: 900px){
+
+  #viaje .travel-wrapper{
+    padding: 8px;
+  }
+
+  #viaje-mobile{
+    max-width:none;
+    width:100%;
+  }
+
+  #viaje-mobile img{
+    width:100%;
+    display:block;
+  }
 }

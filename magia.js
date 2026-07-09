@@ -44,7 +44,7 @@ const CONFIG = {
     {
       hora:"14:00",
       titulo:"Recepción",
-      sub:"Can Curreu, San Carlos",
+      sub:"Can Curreu, Sant Carles",
       icono:"./Media/bebida.png"
     },
     {
@@ -54,19 +54,12 @@ const CONFIG = {
       icono:"./Media/plato.png"
     },
     {
-      hora:"18:30",
+      hora:"18:00",
       titulo:"Fiesta",
       sub:"Hasta que caiga el sol",
       icono:"./Media/musica.png"
     },
-  ],  
-  viajeIntro:"Venís de lejos y nos hace mucha ilusión. Aquí tenéis lo esencial para organizar el viaje.",  
-  viaje:[  
-    {ico:"Cómo llegar", titulo:"Vuelos a Ibiza (IBZ)", texto:"Conexiones directas desde Madrid, Barcelona, Valencia y Palma. Desde Canarias, escala en la península."},  
-    {ico:"En la isla", titulo:"Coche de alquiler", texto:"Lo más cómodo para moverse. Los novios recomiendan MotoLuis."},  
-    {ico:"Dónde dormir", titulo:"Zona Santa Eulària", texto:"Contactad con los novios para recomendaciones ya que tienen acuerdos con algunos hoteles. Además, Can Curreu ofrece un 15% de descuento para nuestros invitados en el alojamiento el día de la boda."},  
-    {ico:"Detalle", titulo:"Desplazamiento", texto:"Con alcohol de por medio, siempre es mejor ir en taxi o designar al sobrio del grupo... </br> ¡Suerte a esa persona!"},  
-  ],  
+  ],   
   vestimenta:{titulo:"Semi-formal",   
     texto:"Colores primaverales, rebequita y zapato cómodo: habrá césped, baile y mucho alcohol. Aunque el blanco no está en la lista, aquí hay recomendaciones que no os harán desentonar:",
     paleta:["#DD874E","#EAAF7A","#D65A57","#E7C878","#B9B45E","#9E92A6","#9AA8BC"]},  
@@ -153,8 +146,6 @@ $('plan').innerHTML = CONFIG.itinerario.map((i, index) => `
 
   </div>
 `).join('');
-$('viaje-cards').innerHTML=CONFIG.viaje.map(c=>  
-  `<div class="card"><div class="ico">${c.ico}</div><h4>${c.titulo}</h4><p>${c.texto}</p></div>`).join('');  
 
 $('faq').innerHTML=CONFIG.faq.map(f=>  
   `<details><summary>${f.q}</summary><div class="a">${f.a}</div></details>`).join('');  
