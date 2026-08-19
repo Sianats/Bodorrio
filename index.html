@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Media/JA.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/Media/JA.png">
+  <meta name="theme-color" content="#FFF8F3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Mulish:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <title>Juan & Anaïs · 24 Abril 2027</title>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Juan & Anaïs · 24 Abril 2027">
+  <meta property="og:description" content="Dos islas · un mar · una boda">
+  <meta property="og:image" content="https://sianats.github.io/Bodorrio/Media/preview.png">
+  <meta property="og:url" content="https://sianats.github.io/Bodorrio/index.html">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Juan & Anaïs · 24 Abril 2027">
+  <meta name="twitter:description" content="Dos islas · un mar · una boda">
+  <meta name="twitter:image" content="https://sianats.github.io/Bodorrio/Media/preview.png">
+
+</head>
+
+<!-- IMPORTANTE: esto activa el overlay -->
+<body class="envelope-locked">
+
+<!-- ===================== SOBRE ===================== -->
+<div id="mobile-intro">
+
+  <img
+    src="./Media/sobre.png"
+    id="mobile-cover"
+    alt="Sobre">
+
+  <video
+    id="mobile-video"
+    playsinline
+    preload="auto">
+      <source src="./Media/sobrefadelento.mp4" type="video/mp4">
+  </video>
+</div>
+
+
+<div id="desktop-envelope">
+
+  <img
+    id="desktop-envelope-img"
+    src="./Media/sobrepc.png"
+    alt="Abrir invitación">
+
+  <video
+    id="desktop-envelope-video"
+    playsinline
+    preload="auto">
+      <source src="./Media/aperturapc.mp4" type="video/mp4">
+  </video>
+
+</div>
+
+<div id="sky"></div>
+  <div id="stars"></div>
+  <div id="celest"></div>
+  <div id="moon"></div>
+  <div class="vignette"></div>
+  <div id="progress"></div>
+
+  <nav id="nav" aria-label="Navegación">
+    <a class="brand" href="#inicio">
+      <img src="./Media/JA.png" alt="Sello">
+    </a>
+
+    <div class="links">
+      <a href="#historia">Historia</a>
+      <a href="#dia">El día</a>
+      <span class="nav-sep">|</span>
+      <a href="#donde">Dónde</a>
+      <a href="#viaje">Viaje</a>
+      <a class="cta" href="#rsvp">Confirmar</a>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="hero" id="inicio">
+
+    <div class="hero-inner">
+      <div class="hero-top">
+        <div class="coast-tag">
+          <b id="t-isla-novia">Ibiza</b>
+          <span id="t-coord-novia">39°04′N · 1°44′E</span>
+        </div>
+
+        <div class="coast-tag r">
+          <b id="t-isla-novio">Lanzarote</b>
+          <span id="t-coord-novio">29°07′N · -13°47′O</span>
+        </div>
+      </div>
+
+      <p class="eyebrow hero-eyebrow">Dos islas · un mar · una boda</p>
+
+      <h1 class="names">
+        <span class="n a" id="t-novio">Juan</span>
+        <span class="amp">
+          <span class="rule"></span>
+          <span class="y">y</span>
+          <span class="rule"></span>
+        </span>
+        <span class="n b" id="t-novia">Anaïs</span>
+      </h1>
+
+      <p class="hero-date" id="t-fecha">Sábado · 24 Abril 2027</p>
+    </div>
+
+    <div class="scroll-cue">
+      <span>Sumérgete</span>
+      <span class="line"></span>
+    </div>
+  </header>
+
+  <!-- ===================== CUENTA ATRÁS ===================== -->
+<section class="section" id="contador-section">
+
+  <div class="panel dark reveal countdown-panel">
+
+      <span class="eyebrow c">Cuenta atrás</span>
+      <h2 class="title">¿Cuándo zarpa el amor?</h2> 
+
+    <div class="boat-screen" id="boat-screen">
+
+      <div class="escena">
+        <img src="barco/barco.png" alt="Barco" class="barco">
+      </div>
+
+    <div class="boat-msg">
+     ♪ ¡Púlsame! ♫
+    </div>
+
+    </div>
+
+    <div class="countdown-content" id="countdown-content">
+
+      <div class="count">
+        <div class="unit">
+          <div class="num" id="d">--</div>
+          <div class="lab">Días</div>
+        </div>
+
+        <div class="unit">
+          <div class="num" id="h">--</div>
+          <div class="lab">Horas</div>
+        </div>
+
+        <div class="unit">
+          <div class="num" id="m">--</div>
+          <div class="lab">Min</div>
+        </div>
+
+        <div class="unit">
+          <div class="num" id="s">--</div>
+          <div class="lab">Seg</div>
+        </div>
+      </div>
+
+      <p class="count-msg" id="count-msg"></p>
+
+    </div>
+
+    <audio id="countdown-audio" preload="auto">
+      <source src="./Media/camela.mp3" type="audio/mpeg">
+    </audio>
+
+  </div>
+
+</section>
+
+  <!-- ===================== HISTORIA ===================== -->
+  <section class="section" id="historia">
+    <div class="panel light reveal">
+      <span class="eyebrow c">Nuestra historia</span>
+      <h2 class="title">Donde el océano y el mar se encuentran.</h2>
+      <div class="story" id="story"></div>
+    </div>
+  </section>
+
+  <!-- ===================== ISLAS ===================== -->
+  <section class="section" id="islas">
+    <div class="panel dark reveal">
+      <span class="eyebrow c">De dónde venimos</span>
+      <h2 class="title">Una mediterránea, un atlántico</h2>
+
+      <div class="islands">
+        
+        <div class="isla-shape ibiza-shape">
+          <img src="./Media/ibiza-watercolor.png" alt="Ibiza">
+
+          <div class="isla-text ibiza-text">
+            <div class="who">Ella, de</div>
+            <div class="name" id="t-isla-novia-2"></div>
+            <div class="desc" id="t-desc-novia"></div>
+            <div class="coords" id="t-coord-novia-2"></div>
+          </div>
+        </div>
+
+        <div class="isla-shape lanza-shape">
+          <img src="./Media/lanzarote-watercolor.png" alt="Lanzarote">
+
+          <div class="isla-text lanza-text">
+            <div class="who">Él, de</div>
+            <div class="name" id="t-isla-novio-2"></div>
+            <div class="desc" id="t-desc-novio"></div>
+            <div class="coords" id="t-coord-novio-2"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ruta con avión -->
+      <div class="route" aria-hidden="true">
+        <svg viewBox="0 0 800 140">
+          <path id="route-path" d="M 90,110 Q 400,10 710,110" fill="none" stroke="rgba(185, 140, 130, 0.6)" stroke-width="1.5" stroke-dasharray="3 7"/>
+
+          <g id="plane" fill="#F4C77A">
+            <path d="M0,-2 L14,0 L0,2 L3,0 Z M2,-1 L-7,-6 L-9,-6 L-4,-1 Z M2,1 L-7,6 L-9,6 L-4,1 Z"/>
+            <animateMotion id="planeMotion" dur="7s" repeatCount="indefinite" rotate="auto" keyPoints="0;1" keyTimes="0;1" calcMode="linear">
+              <mpath href="#route-path"/>
+            </animateMotion>
+          </g>
+        </svg>
+      </div>
+
+      <p class="between">
+        <b id="t-distancia"></b> de mar entre dos islas.<br>
+        El <span id="t-dia-corto"></span> se juntan para siempre.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== EL DÍA ===================== -->
+  <section class="section" id="dia">
+    <div class="panel light reveal">
+      <span class="eyebrow c">El plan</span>
+      <h2 class="title">El gran día</h2>
+      <div class="plan" id="plan"></div>
+      <div style="text-align:center;margin-top:3rem;">
+        <a class="btn solid" id="add-calendar" href="#">
+        Añadir al calendario
+        </a>
+</div>
+    </div>
+  </section>
+  
+
+  <!-- ===================== DÓNDE ===================== -->
+  <section class="section" id="donde">
+    <div class="panel dark reveal">
+      <span class="eyebrow c">Dónde</span>
+      <h2 class="title">Los puntos de encuentro</h2>
+
+<div class="place split">
+
+  <div class="col ceremonia">
+    <div class="venue">Ceremonia</div>
+    <div class="sub" id="t-lugar"></div>
+    <div class="addr" id="t-direccion"></div>
+    <a class="btn" id="t-mapa" href="#" target="_blank">¿Cómo llegar?</a>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="col convite">
+    <div class="venue">Convite</div>
+    <div class="sub" id="t-convite"></div>
+    <div class="addr" id="t-direccion1"></div>
+    <a class="btn" id="t-mapa1" href="#" target="_blank">¿Cómo llegar?</a>
+  </div>
+
+</div>
+
+    </div>
+  </section>
+
+  <!-- ===================== VIAJE Y DORMIR ===================== -->
+  <section class="section" id="viaje">
+
+      <div class="panel light reveal travel-wrapper">
+
+          <div id="viaje-desktop">
+              <img src="./Media/postalh.png" alt="">
+          </div>
+
+          <div id="viaje-mobile">
+              <img src="./Media/postalv.png" alt="">
+          </div>
+
+      </div>
+
+  </section>
+
+  <!-- ===================== VESTIMENTA ===================== -->
+  <section class="section">
+    <div class="panel dark reveal">
+      <span class="eyebrow c">Código de vestimenta</span>
+      <h2 class="title" id="t-dress-title"></h2>
+
+      <div class="dress">
+        <p id="t-dress-text" style="text-align: justify"></p><br>
+          <img src="./Media/dresscode.png" class="dresscode" alt="vestimenta">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== REGALO ===================== -->
+  <section class="section" id="regalo">
+    <div class="panel light reveal">
+      <span class="eyebrow c">Vuestro regalo</span>
+      <h2 class="title">La dolorosa</h2>
+
+      <div class="gift">
+        <p id="t-gift-text" style="text-align: justify"></p>
+        <div class="copyrow" id="gift-rows"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="section">
+    <div class="panel dark reveal">
+      <span class="eyebrow c">Dudas frecuentes</span>
+      <h2 class="title">Algunas cosas a tener en cuenta</h2>
+      <div class="faq" id="faq" style="text-align: justify"></div>
+    </div>
+  </section>
+
+  <!-- ===================== AVISO ===================== -->
+  <section class="section">
+    <div class="warn reveal">
+      <span class="eyebrow">¡Aviso importante!</span>
+      <p>
+        Esta boda puede incluir <b>baile descoordinado</b>, lágrimas de emoción, demasiado vino y <b>vistas que quitan el sentido</b>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== RSVP ==================== -->
+  <section class="section" id="rsvp">
+    <div class="panel dark reveal">
+      <span class="eyebrow c">Confirma tu asistencia</span>
+      <h2 class="title">El "Sí vengo"</h2>
+      <p class="lead" id="t-rsvp-fecha"></p>
+
+      <div class="form">
+
+        <div class="field">
+          <label for="f-nombre">Nombre y apellidos</label>
+          <input id="f-nombre" type="text" placeholder="Tu nombre">
+        </div>
+
+        <div class="field">
+          <label>¿Vendrás?</label>
+          <div class="seg" id="seg-asiste">
+            <button type="button" data-v="Sí, allí estaré" aria-pressed="true">Sí, allí estaré</button>
+            <button type="button" data-v="No podré ir" aria-pressed="false">No podré ir</button>
+          </div>
+        </div>
+
+        <!-- Menú del invitado principal: siempre adulto -->
+        <div class="field" id="field-menu-principal">
+          <label for="f-menu-principal">Tu menú</label>
+          <select id="f-menu-principal">
+            <option value="">Elige una opción</option>
+            <option value="Carne">Carne</option>
+            <option value="Pescado">Pescado</option>
+          </select>
+        </div>
+
+        <div class="field" id="field-alergias">
+          <label for="f-alergias">Tus alergias o intolerancias</label>
+          <input id="f-alergias" type="text" placeholder="Opcional">
+        </div>
+
+        <div class="field" id="field-acomp">
+          <label for="f-acomp">¿Cuántos seréis?</label>
+          <input id="f-acomp" type="text" inputmode="numeric" pattern="[0-9]*" value="1">
+        </div>
+
+        <!-- Aquí el JS pinta los acompañantes. No metas menús manuales aquí. -->
+        <div class="guest-list" id="guest-list"></div>
+
+        <div class="field is-hidden" id="field-no-asiste">
+          <div class="sad-note">
+            Si estabas invitado es porque eres muy especial para nosotros, y nos da mucha pena que finalmente no puedas venir a compartir este día tan importante con nosotros. Esperamos poder verte y celebrarlo contigo pronto.
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="f-msg">Un mensaje para los novios</label>
+          <textarea id="f-msg" placeholder="Opcional"></textarea>
+        </div>
+
+        <button class="btn solid" id="rsvp-send" type="button">Enviar confirmación</button>
+
+        <p id="rsvp-status" class="rsvp-status" role="status" aria-live="polite"></p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CIERRE ===================== -->
+  <section class="end reveal">
+    <div class="t">Os esperamos</div>
+    <div class="s" id="t-end-sub"></div>
+  </section>
+
+  <footer>
+    <span id="t-foot-novia">Ibiza</span>
+    <span class="sun-mini"></span>
+    <span id="t-foot-novio">Lanzarote</span>
+    <div style="margin-top:.8rem">Dos islas · un mar · una boda</div>
+  </footer>
+
+  <script src="magia.js"></script>
+
+</body>
+
+</html>
