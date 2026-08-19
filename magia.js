@@ -4,7 +4,7 @@ const CONFIG = {
   fechaISO:"2027-04-24T12:00:00",          // mueve la cuenta atrás  
   fechaTexto:"Sábado · 24 Abril 2027",  
   diaCorto:"24 de Abril",  
-  rsvpLimite:"Confírmanos antes del 11 de Noviembre de 2026.",  
+  rsvpLimite:"Confírmanos antes del 19 de Febrero de 2026.",  
   cierreFrase:"Bajo el mismo sol, entre dos mares",  
   isla:{  
     novia:{nombre:"Ibiza", coords:"39°04′N · 1°44′E", coordsLargo:"39°04′N · 1°44′E · Mediterráneo",  
@@ -69,7 +69,7 @@ const CONFIG = {
       {label:"Bizum", valor:"649 888 277"},  
     ]},  
   faq:[  
-    {q:"¿Y el acompañante?", a:"Los acompañantes se indican al confirmar tu asistencia y lo tendremos en cuenta para el catering. Si en la invitación os hemos indicado un número, significa que podéis venir con ese número de acompañantes. Pueden ser pareja, hijos, familiares, etc.; en cualquier caso, se trata de personas que ya hemos previsto y por eso hemos enviado la invitación de forma conjunta. Si tenéis dudas sobre quién podría ser ese acompañante, no dudéis en preguntarnos."},  
+    {q:"¿Y el acompañante?", a:"Los acompañantes se indican al confirmar tu asistencia y lo tendremos en cuenta para el catering. En cada invitación hemos dejado reflejado cuántas personas se preveen por casa. Pueden ser pareja, hijos, familiares, etc.; en cualquier caso, se trata de personas que ya hemos previsto y por eso hemos enviado la invitación de forma conjunta. Si tenéis dudas sobre quién podría ser ese acompañante, no dudéis en preguntarnos."},  
     {q:"¿Los niños son bienvenidos?", a:"¡Claro! Avísanos para preparar su sitio y su menú. Indicanos en los comentarios de la confirmación qué edad tienen y si necesitan trona."},  
     {q:"¿Hay aparcamiento?", a:"Sí, en el propio lugar hay 2 parkings. Al ser limitado, recomendamos compartir coche o venir en taxi."},  
     {q:"¿Hasta cuándo confirmo?", a:"Cuanto antes mejor, y como muy tarde en la fecha indicada en la sección de confirmación."},  
@@ -275,7 +275,7 @@ function getChildMenuOptions(){
   return `
     <option value="">Elige una opción</option>
     <option value="Escalope de pollo">Escalope de pollo</option>
-    <option value="Espaguetis boloñesa">Espaguetis boloñesa</option>
+    <option value="Espaguetis boloñesa">Dieta especial (indicar en comentarios)</option>
   `;
 }
 
